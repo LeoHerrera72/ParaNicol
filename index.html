@@ -27,19 +27,24 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
+html{
+    height:100%;
+}
+
 body{
 
-height:100vh;
+    min-height:100vh;
 
-display:flex;
+    display:flex;
 
-justify-content:center;
+    justify-content:center;
 
-align-items:center;
+    align-items:center;
 
-overflow:hidden;
-
-background-image:
+    overflow-x:hidden;
+    overflow-y:auto;
+    background-image:
+    
 linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
 url("https://img.magnific.com/foto-gratis/pareja-anime-enamorada_23-2151103338.jpg?semt=ais_hybrid&w=740&q=80");
 
@@ -48,6 +53,19 @@ background-size:cover;
 background-position:center;
 
 background-repeat:no-repeat;
+
+
+    padding:25px;
+    background-attachment:fixed;
+    background-attachment:scroll;
+    
+
+}
+
+button{
+
+width:280px;
+max-width:100%;
 
 }
 
@@ -263,6 +281,69 @@ transform:translate(-50%,-50%) scale(1);
 
 }
 
+
+}
+
+
+@media (max-width:768px){
+
+body{
+
+padding:20px;
+
+align-items:flex-start;
+
+}
+
+.contenedor{
+
+width:100%;
+
+padding:25px;
+
+margin-top:20px;
+margin-bottom:20px;
+
+}
+
+h1{
+
+font-size:32px;
+
+}
+
+p{
+
+font-size:17px;
+
+line-height:1.6;
+
+}
+
+button{
+
+width:100%;
+
+padding:15px;
+
+font-size:18px;
+
+margin-top:12px;
+
+}
+
+#mensaje{
+
+font-size:18px;
+
+}
+
+#amor{
+
+font-size:42px;
+
+}
+
 }
 
 </style>
@@ -270,6 +351,7 @@ transform:translate(-50%,-50%) scale(1);
 </head>
 
 <body>
+    
 
     <audio id="tema1" autoplay loop>
     <source src="tema1.mp3" type="audio/mpeg">
