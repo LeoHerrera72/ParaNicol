@@ -94,58 +94,47 @@ height:auto;
 }
 
 html, body{
-    width:100%;
-    min-height:100%;
     margin:0;
-    padding:0;
+    min-height:100%;
 }
 
 body{
 
+    min-height:100vh;
+
     display:flex;
     justify-content:center;
-    align-items:center;
+    align-items:flex-start;
 
     overflow-x:hidden;
-    overflow-y:auto;
+
+    padding:25px;
+
+    background:none;
+
+}
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100vw;
+    height:100vh;
 
     background-image:
     linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
     url("https://img.magnific.com/foto-gratis/pareja-anime-enamorada_23-2151103338.jpg?semt=ais_hybrid&w=740&q=80");
 
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+   
 
-    background-attachment:scroll;
+    z-index:-1;
 
-    padding:25px;
-
-}
-
-    body::before{
-
-content:"";
-
-position:fixed;
-
-top:0;
-left:0;
-
-width:100%;
-height:100%;
-
-background-image:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-url("https://img.magnific.com/foto-gratis/pareja-anime-enamorada_23-2151103338.jpg?semt=ais_hybrid&w=740&q=80");
-
-background-size:cover;
-
-background-position:center;
-
-z-index:-1;
-
-}
+}    
 button{
 
 width:280px;
