@@ -31,14 +31,71 @@ html{
     height:100%;
 }
 
-html{
-    width:100%;
-    height:100%;
+.galeria{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+margin-top:30px;
+
+flex-wrap:wrap;
+
+}
+
+.galeria img{
+
+width:170px;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+border:4px solid white;
+
+box-shadow:0 0 20px rgba(255,255,255,.5);
+
+transition:.4s;
+
+}
+
+.galeria img:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 30px hotpink;
+
+}
+
+@media (max-width:768px){
+
+.galeria{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.galeria img{
+
+width:90%;
+
+max-width:280px;
+
+height:auto;
+
+}
+
 }
 
 body{
 
-    min-height:100dvh;
+    min-height:100vh;
 
     display:flex;
 
@@ -48,16 +105,22 @@ body{
 
     overflow-x:hidden;
     overflow-y:auto;
-
-    padding:20px;
-
     background-image:
-    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-    url("https://img.magnific.com/foto-gratis/pareja-anime-enamorada_23-2151103338.jpg?semt=ais_hybrid&w=740&q=80");
+    
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("https://img.magnific.com/foto-gratis/pareja-anime-enamorada_23-2151103338.jpg?semt=ais_hybrid&w=740&q=80");
 
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+
+    padding:25px;
+    background-attachment:fixed;
+    background-attachment:scroll;
+    
 
 }
 
@@ -95,23 +158,6 @@ box-shadow:0 25px 60px rgba(0,0,0,.45);
 animation:aparecer 1.3s;
 
 z-index:10;
-max-height:90dvh;
-    overflow-y:auto;
-
-}
-
-    @media (max-width:768px){
-
-    body{
-        align-items:flex-start;
-    }
-
-    .contenedor{
-
-        margin-top:20px;
-        margin-bottom:20px;
-
-    }
 
 }
 
@@ -423,6 +469,32 @@ Feliz dia mi amor aunque sea un poquito tardon
 Con amor...
 
 <b>Leo ❤️</b>
+
+</div>
+<div class="galeria">
+
+    <img src="imagen1.png" alt="Foto 1">
+
+    <img src="imagen2.png" alt="Foto 2">
+
+    <img src="imagen3.png" alt="Foto 3">
+
+</div>
+<div id="mensaje">
+
+    ...
+
+    <b>Leo ❤️</b>
+
+    <div class="galeria">
+
+        <img src="imagen1.png">
+
+        <img src="imagen2.png">
+
+        <img src="imagen3.png">
+
+    </div>
 
 </div>
 
