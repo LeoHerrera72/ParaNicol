@@ -14,9 +14,7 @@
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2/dist/index.umd.js"></script>
 
-<audio id="tema1" autoplay loop>
-    <source src="tema1.mp3" type="audio/mpeg">
-</audio>
+
 
 <style>
 
@@ -273,6 +271,10 @@ transform:translate(-50%,-50%) scale(1);
 
 <body>
 
+    <audio id="tema1" autoplay loop>
+    <source src="tema1.mp3" type="audio/mpeg">
+</audio>
+
 <div class="contenedor">
 
 <h1>❤️ Para Nicol ❤️</h1>
@@ -340,8 +342,12 @@ NICOL
 
 <script>
 
-    function mostrarMensaje() {
+function mostrarMensaje() {
+
+    iniciarMusica();
+
     document.getElementById("mensaje").style.display = "block";
+
 }
 
 // ❤️ Corazones cayendo
@@ -369,19 +375,33 @@ function crearCorazon() {
 
 }
 
-window.addEventListener("load", () => {
-    const musica = document.getElementById("musica");
+const musica = document.getElementById("tema1");
+
+// Iniciar música con el primer toque
+function iniciarMusica() {
+
     musica.volume = 0.4;
 
-    musica.play().catch(error => {
-        console.log("El navegador bloqueó la reproducción automática:", error);
+    musica.play().catch(err => {
+        console.log("No se pudo reproducir:", err);
     });
-});
+
+}
+
+// Primer toque en cualquier parte de la página
+document.addEventListener("click", iniciarMusica, { once: true });
 
 setInterval(crearCorazon, 250);
 
 // 🎆 Sorpresa
+
+
+
+    // Todo el resto de tu código...
+
 function mostrarSorpresa(){
+
+    iniciarMusica();
 
     document.getElementById("amor").style.display = "block";
 
